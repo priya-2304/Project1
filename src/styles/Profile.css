@@ -1,0 +1,951 @@
+.profile-page-wrapper {
+  background-color: #ffffff !important;
+  min-height: 100vh;
+  padding-top: 100px; /* Space for Navbar */
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: stretch; /* This makes Sidebar & Card same height */
+  gap: 20px;
+  width: 90%;
+  max-width: 1100px;
+}
+
+/* Sidebar - Height adjusts based on Main Content */
+.sidebar {
+  background: #ffffff;
+  width: 250px;
+  border-radius: 12px;
+  padding: 20px 0;
+  /* height: fit-content removed so it stretches with the container */
+}
+
+.sidebar-title {
+  color: #6d4c4c;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 12px 20px;
+  color: #000;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.sidebar-menu li.active {
+  background-color: #ff4d24; /* Theme Color */
+  color: #fff;
+  margin: 0 10px;
+  border-radius: 8px;
+}
+
+/* Help Center Card */
+.help-center-card {
+  background: #ffffff;
+  flex: 1;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.main-help-icon {
+  color: #ff4d24;
+  font-size: 2rem;
+}
+
+.help-title {
+  color: #000;
+  font-size: 1.4rem; /* Smaller font as requested */
+  font-weight: 800;
+  margin: 0;
+}
+
+.help-subtitle {
+  color: #777;
+  font-size: 0.9rem;
+  margin: 5px 0 25px 0;
+}
+
+/* Accordion */
+.accordion-group {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.label-text { color: #000; font-weight: 500; }
+.plus-sign { font-size: 1.5rem; color: #000; }
+
+.accordion-content {
+  padding: 0 20px 20px 20px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.question-text { color: #6d4c4c; font-weight: 700; margin-top: 15px; margin-bottom: 5px; }
+.answer-text { color: #444; font-size: 0.9rem; line-height: 1.5; }
+
+/* Contact Support Footer */
+.footer-support {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+
+.footer-title { color: #000; font-size: 1rem; margin-bottom: 15px; }
+.contact-item { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; color: #000; }
+.react-icon { color: #ff4d24; font-size: 1.2rem; }
+.wp-icon { color: #25D366; }
+
+/* Sidebar Items Alignment */
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+
+/* General Tab Styles */
+.tab-title {
+  color: #000;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Size Guide Table */
+.size-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.size-table th, .size-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  color: #000;
+}
+
+.size-table th { background-color: #f8f8f8; }
+
+/* Buttons */
+.theme-btn {
+  background-color: #ff4d24;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 15px;
+  width:700px;
+}
+
+.theme-btn:hover { background-color: #e6441f; }
+
+/* Track Order Input */
+.track-input-box {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.track-input-box input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Sidebar stretching to match content */
+.profile-container {
+  display: flex;
+  align-items: stretch; /* Forces sidebar height to match main card */
+  gap: 24px;
+  width: 90%;
+  max-width: 1100px;
+}
+
+/* Professional Size Table */
+.professional-table-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.size-guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.size-guide-table th {
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: left;
+  padding: 15px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.size-guide-table td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+}
+
+.highlight-row { background-color: #fff9f8; }
+
+/* My Orders Professional Card */
+.order-item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.order-details { display: flex; gap: 15px; align-items: center; }
+.order-details h4 { margin: 0; color: #000; }
+.order-details p { margin: 0; font-size: 0.85rem; color: #666; }
+
+.reorder-btn {
+  background: none;
+  border: 1px solid #ff4d24;
+  color: #ff4d24;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.reorder-btn:hover {
+  background: #ff4d24;
+  color: #fff;
+}
+
+/* Animations */
+.tab-fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer Grid */
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+.profile-page-wrapper {
+  background-color: #000;
+  min-height: 100vh;
+  padding: 120px 20px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: stretch; /* Corrected: Sidebar matches Main Card height */
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.sidebar {
+  background: #fff;
+  width: 280px;
+  border-radius: 15px;
+  padding: 30px 0;
+}
+
+.help-center-card {
+  background: #fff;
+  flex: 1;
+  border-radius: 15px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Professional Table */
+.professional-table-container {
+  margin-top: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.size-guide-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.size-guide-table th {
+  background: #f8f8f8;
+  padding: 15px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.size-guide-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.highlight-row { background: #fff5f3; }
+
+/* Animation */
+.tab-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Plus/Minus Responsive Styling */
+.plus-sign {
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 20px;
+  text-align: center;
+  color: #000;
+}
+
+/* The main card container */
+.order-item-card {
+  display: flex;
+  flex-direction: column; /* Stacks details and button vertically */
+  align-items: center;    /* Centers items horizontally */
+  justify-content: center;
+  padding: 30px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background: #fff;
+  gap: 20px;             /* Space between details and button */
+  width: 100%;           /* Ensures it expands to fill the main card */
+}
+
+/* The wrapper for the button */
+.order-action-area {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the button inside the wrapper */
+  align-items: center;
+}
+
+/* The button itself */
+.reorder-btn {
+  background-color: #ff4d24;
+  color: white;
+  border: none;
+  padding: 12px 40px;      /* Expanded padding for a better look */
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  min-width: 200px;        /* Makes the button look more professional */
+}
+
+.reorder-btn:hover {
+  transform: scale(1.05);
+  background-color: #e6441f;
+}
+
+.pro-input {
+  width: 700px;         
+  max-width: 800px;     
+  padding: 15px 20px;    
+  font-size: 1.1rem;     
+  border-radius: 12px;   
+  box-sizing: border-box;
+}
+
+.track-input-box {
+  width: 700px;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  gap: 15px;             
+}
+
+.profile-edit-section {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #ff4d24;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+}
+
+.save-btn {
+  background-color: #ff4d24; /* Matching the brown button in image */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-btn:hover {
+  background-color: rgb(220, 66, 66);
+}
+
+/* Card Container for the Profile Section */
+.profile-section-container {
+  max-width: 750px; /* Increased width for a more spacious feel */
+  margin: 20px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 20px; /* Rounded corners as seen in your reference images */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+  border: 1px solid #f0f0f0;
+}
+
+.profile-header {
+  text-align: center;
+  color: #5D3A3A; /* Deep brown tone from your reference */
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* --- VIEW MODE STYLING --- */
+.profile-view-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.view-group {
+  text-align: left;
+  border-bottom: 1px solid #f9f9f9;
+  padding-bottom: 10px;
+}
+
+.view-group label {
+  font-weight: 700;
+  color: #5D3A3A;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.view-group p {
+  margin: 8px 0 0 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* --- EDIT MODE (FORM) STYLING --- */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: 700;
+  color: #5D3A3A;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Expanded Text Areas and Inputs */
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+  width: 600px; 
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #fcfcfc;
+  transition: all 0.3s ease;
+  box-sizing: border-box; 
+  outline: none;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+  border-color: #ff4d24; 
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255, 77, 36, 0.1);
+}
+
+/* --- BUTTON STYLING --- */
+.edit-mode-btn, .save-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+/* Peach/Orange Button for Edit */
+.edit-mode-btn {
+  background-color: #ff4d24; 
+  color: white;
+}
+
+/* Dark Brown Button for Save */
+.save-btn {
+  background-color: #ff4d24;
+  color: white;
+}
+
+.edit-mode-btn:hover, .save-btn:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Target the Address Textarea specifically */
+.profile-form textarea {
+  width: 100%; /* Expands to full card width */
+  padding: 14px 18px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: #ffffff; /* Explicit white background */
+  color: #000000; /* Force text color to Black */
+  transition: all 0.3s ease;
+  box-sizing: border-box; 
+  resize: vertical; /* Allows user to expand height if needed */
+  min-height: 100px; /* Makes it look like a proper address box */
+}
+
+/* Ensure all inputs in edit mode have black text */
+.profile-form input, 
+.profile-form select {
+  color: #000000 !important; /* Ensures name, email, etc. are also black */
+  background-color: #ffffff;
+}
+
+/* Focus state for the textarea */
+.profile-form textarea:focus {
+  border-color: #ff4d24; /* Brand orange focus color */
+  box-shadow: 0 0 0 4px rgba(255, 77, 36, 0.1);
+  outline: none;
+}
+
+/* Reduced Spacing between groups */
+.input-group {
+  margin-bottom: 12px; /* Decreased space to make it compact */
+}
+
+.input-group label {
+  color: #5D3A3A; /* Deep brown label */
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* View Mode Layout */
+.profile-view-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduced gap between items to keep it compact */
+  text-align: left;
+  width:600px;
+}
+
+/* Styling each group (Label + Data) */
+.view-group {
+  border-bottom: 1px solid #f0f0f0; /* Subtle line for better organization */
+  padding-bottom: 10px;
+}
+
+.view-group label {
+  display: block;
+  font-weight: 700;
+  color: #5D3A3A; /* Deep brown color */
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.view-group p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #000000; /* Ensuring text is BLACK */
+  font-weight: 500;
+}
+
+/* Edit Profile Button */
+.edit-mode-btn {
+  width: 100%; /* Spans the full width of the expanded card */
+  background-color: #ff4d24; /* Brand orange */
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.edit-mode-btn:hover {
+  background-color: #e64420;
+  transform: translateY(-2px);
+}
+
+/* --- Responsiveness: Tablets and Mobile --- */
+
+/* Tablet View (Screens smaller than 992px) */
+@media (max-width: 992px) {
+  .profile-container {
+    flex-direction: column; /* Stacks sidebar above the main content */
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .edit-mode-btn, .save-btn {
+    width: 40px !important;        /* Screen width ka sirf 60% lega */
+    min-width: 280px;             /* Bahut zyada chota bhi na ho */
+    margin-left: 60px; /* Center mein alignment */
+    display: block !important;
+    align-items: center;
+    padding: 10px 15px !important;
+    font-size: 18px !important;
+    border-radius: 8px !important;
+    background-color: #ff5722 !important; /* Image 24e0c6 wala color */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    white-space: nowrap !important; /* Text line change na kare */
+  }
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .sidebar-menu {
+    display: flex;
+    overflow-x: auto; /* Horizontal scroll for menu items if they don't fit */
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+
+  .sidebar-menu li {
+    white-space: nowrap; /* Prevents text from wrapping in the horizontal menu */
+    padding: 10px 15px;
+  }
+
+  .profile-section-container {
+    max-width: 100%; /* Card takes full width */
+    padding: 25px;
+  }
+}
+
+/* Mobile View (Screens smaller than 600px) */
+@media (max-width: 600px) {
+  .profile-page-wrapper {
+    padding: 10px 0;
+  }
+
+  .tab-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Adjusting the Info Card for small screens */
+  .profile-section-container {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  /* Make view groups look better on small screens */
+  .view-group p {
+    font-size: 1rem;
+  }
+
+  /* Inputs and Buttons */
+  .profile-form input, 
+  .profile-form select, 
+  .profile-form textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .edit-mode-btn, .save-btn {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  /* Table responsiveness for Size Guide */
+  .professional-table-container {
+    overflow-x: auto; /* Adds scroll to table if it's too wide */
+  }
+
+  .size-guide-table th, .size-guide-table td {
+    padding: 10px 5px;
+    font-size: 0.85rem;
+  }
+
+  /* Footer contact items */
+  .footer-support {
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .contact-item {
+    font-size: 0.85rem;
+    justify-content: center;
+  }
+}
+
+/* --- Global Fix for Background --- */
+.profile-page-wrapper {
+    background-color: #ffffff !important; /* Black background hatane ke liye */
+    min-height: 100vh;
+}
+
+/* --- Mobile Specific Fixes (max-width: 600px) --- */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 10px;
+        background: white;
+    }
+
+    /* Card ko center aur clean karne ke liye */
+    .help-center-card {
+        width: 100%;
+        box-shadow: none; /* Mobile par clean look ke liye shadow hata di */
+        padding: 15px;
+        margin: 0 auto;
+    }
+
+    /* Sidebar Menu handling */
+    .sidebar-menu {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding: 10px 5px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar-menu li {
+        font-size: 13px;
+        padding: 8px 12px;
+        white-space: nowrap; /* Text line change na kare */
+        border: 1px solid #ddd;
+        border-radius: 20px;
+    }
+
+    /* Input Fields Fix: Taki ye screen se bahar na jaye */
+    .input-group input, 
+    .input-group select, 
+    .input-group textarea,
+    .pro-input {
+        width: 100% !important; /* Full width base on container */
+        box-sizing: border-box; /* Padding ko width ke andar count karega */
+        font-size: 16px; /* Zoom issue fix karne ke liye */
+        margin-bottom: 10px;
+    }
+
+    /* Track Order Section Specific Fix */
+    .track-input-box {
+        display: flex;
+        flex-direction: column; /* Button niche aa jayega input ke */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .theme-btn {
+        width: 100% !important;
+    }
+
+    /* Footer adjustments */
+    .footer-support {
+        margin-top: 30px;
+        padding: 15px;
+        background: #f8f8f8;
+        border-radius: 10px;
+    }
+}
+
+/* Mobile view fixes */
+@media (max-width: 600px) {
+  /* 1. Background Fix: Pura page white rahega, black sidebars hat jayenge */
+  .profile-page-wrapper {
+    background-color: #ffffff !important;
+    padding: 10px 0;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    padding: 0;
+    background: white;
+  }
+
+  /* 2. Card Fix: Card ko screen ke hisab se expand kiya */
+  .help-center-card, .mobile-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0;
+    padding: 15px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* 3. Input Fix: Text inputs aur boxes screen ke andar rahenge */
+  .input-group, .view-group {
+    width: 100% !important;
+  }
+
+  /* Dedicated Mobile Class for Inputs */
+  .mobile-input {
+    width: 100% !important;
+    box-sizing: border-box !important; /* Padding se box bada nahi hoga */
+    font-size: 16px !important; /* Mobile zoom issues rokne ke liye */
+    padding: 12px !important;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #000;
+  }
+ 
+  .edit-mode-btn, .save-btn {
+    width: 40px !important;        /* Screen width ka sirf 60% lega */
+    min-width: 160px;             /* Bahut zyada chota bhi na ho */
+    margin-left: 60px; /* Center mein alignment */
+    display: block !important;
+    align-items: center;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    background-color: #ff5722 !important; /* Image 24e0c6 wala color */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    white-space: nowrap !important; /* Text line change na kare */
+  }
+  /* 4. Button Fix: Button screen se bahar nahi jayega */
+   .save-btn, .theme-btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin: 15px 0;
+    padding: 14px;
+    background-color: #ff5722; /* Image 8 wala Orange-Red color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+
+  /* Sidebar items ko mobile pe row mein convert karne ke liye */
+  .sidebar-menu {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f8f8;
+  }
+
+  .sidebar-menu li {
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+@media (max-width: 400px) {
+  .edit-mode-btn, .save-btn {
+    width: 40px !important;        /* Screen width ka sirf 60% lega */
+    min-width: 160px;             /* Bahut zyada chota bhi na ho */
+    margin-left: 60px; /* Center mein alignment */
+    display: block !important;
+    align-items: center;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    background-color: #ff5722 !important; /* Image 24e0c6 wala color */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    white-space: nowrap !important; /* Text line change na kare */
+  }
+}

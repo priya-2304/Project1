@@ -1,0 +1,689 @@
+/* General Footer Styling */
+.site-footer {
+  background-color: #3d2b29; /* Dark brown/black shade from screenshot */
+  color: #ffffff;
+  padding: 60px 0 20px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+/* Typography & Colors */
+.footer-logo {
+  color: #e65540; /* Your theme color */
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-col h3 {
+  color: #e65540; /* Your theme color for headings */
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-col p, .footer-col li {
+  color: #d1d1d1;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: #d1d1d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #e65540;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #e65540;
+}
+
+/* Contact Info Icons */
+.footer-col svg {
+  margin-right: 10px;
+  color: #ffffff; /* Icons are white in screenshot */
+  vertical-align: middle;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+.site-footer {
+  background-color: #1a1a1a; /* Dark black theme */
+  color: #ffffff;
+  margin-top: auto;
+  padding: 60px 0 20px 0;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  gap: 40px; /* Gap between columns */
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.brand-col {
+  flex: 1.5; /* Makes the logo/description column slightly wider */
+}
+
+/* Headings */
+.footer-logo {
+  color: #e65540; /* Theme Accent */
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.footer-col h3 {
+  color: #e65540; /* Theme Accent */
+  font-size: 20px;
+  margin-bottom: 30px; /* Gap between title and links */
+  font-weight: 600;
+}
+
+/* Paragraph and Links Gap */
+.footer-description {
+  color: #b0b0b0;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 30px; /* Gap between paragraph and social icons */
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 15px; /* Gap between individual links */
+}
+
+.footer-col ul li a {
+  color: #efefef;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #e65540;
+  padding-left: 5px;
+}
+
+/* Contact Section Gap */
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px; /* Gap between phone, email, etc. */
+  color: #efefef;
+}
+
+.contact-icon {
+  color: #e65540;
+}
+
+/* Social Icons Circles */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  background: #333;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #e65540;
+  transform: translateY(-3px);
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-logo, .social-icons, .contact-info p {
+    justify-content: center;
+  }
+}
+
+/* Footer Main Wrapper */
+.site-footer {
+  background-color: #1a1a1a; /* Dark theme */
+  color: #ffffff;
+  width: 100%;
+  padding: 60px 0 0 0; /* Bottom padding 0 taaki copyright bar neeche touch kare */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* Ye line sabse important hai footer ko push karne ke liye */
+  margin-top: auto; 
+  
+  /* Extra scroll rokne ke liye */
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.brand-col {
+  flex: 1.5;
+}
+
+/* Headings & Text */
+.footer-logo {
+  color: #e65540; /* Theme Color */
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.footer-col h3 {
+  color: #e65540;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-description {
+  color: #b0b0b0;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Links List */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #efefef;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+.footer-col ul li a:hover {
+  color: #e65540;
+  padding-left: 8px;
+}
+
+/* Contact Info */
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: #efefef;
+  font-size: 14px;
+}
+
+.contact-icon {
+  color: #e65540;
+  font-size: 18px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  background: #333;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #e65540;
+  transform: translateY(-5px);
+}
+
+/* BOTTOM COPYRIGHT BAR - Exactly at the edge */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  background-color: #111; /* Slightly darker than main footer */
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 14px;
+  border-top: none; /* Agar koi line dikh rahi hai toh usey hata dein */
+  margin-top: 0;
+}
+
+/* Mobile View */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .footer-logo, .social-icons, .contact-info p {
+    justify-content: center;
+  }
+}
+
+/* --- Centered Newsletter Section --- */
+.subscribe-section {
+  width: 100%;
+  background-color: #111; /* Thoda dark background contrast ke liye */
+  padding: 50px 20px 0 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center;    /* Vertically center */
+}
+
+.subscribe-card {
+  max-width: 800px;
+  width: 90%;
+  text-align: center; /* Text ko center karne ke liye */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.subscribe-text label {
+  font-size: 24px;
+  color: #e65540; /* Theme Color */
+  letter-spacing: 1px;
+  display: block;
+}
+
+.subscribe-text p {
+  color: #b0b0b0;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* Form Styles - Centered and Clean */
+.subscribe-form {
+  display: flex;
+  width: 100%;
+  max-width: 550px; /* Form ki width control karne ke liye */
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden; /* Taaki corners rounded dikhen */
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 16px 20px;
+  border: none;
+  background: #222;
+  color: #ffffff !important; /* Likhte waqt text White dikhega */
+  font-size: 15px;
+  outline: none;
+}
+
+.subscribe-form input::placeholder {
+  color: #666;
+}
+
+.subscribe-form button {
+  background-color: #e65540; /* Theme Match */
+  color: white;
+  border: none;
+  padding: 0 35px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #cf4a38;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .subscribe-form {
+    flex-direction: column;
+    border: none;
+    gap: 15px;
+  }
+  
+  .subscribe-form input {
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .subscribe-form button {
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+/* --- RESPONSIVENESS (MOBILE & TABLET) --- */
+
+@media (max-width: 992px) {
+  /* Footer main columns layout */
+  .footer-container {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: flex-start; /* Sab kuch left align karne ke liye */
+    padding: 0 30px;
+    gap: 30px;
+  }
+
+  .footer-col {
+    width: 100%;
+    text-align: left; /* Text ko left rakha hai */
+  }
+
+  .brand-col {
+    flex: none;
+  }
+
+  /* Social Icons left align */
+  .social-icons {
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+
+  /* Newsletter Section Mobile */
+  .subscribe-section {
+    padding: 40px 30px;
+  }
+
+  .subscribe-card {
+    flex-direction: column;
+    align-items: flex-start; /* Newsletter label aur form left align */
+    text-align: left;
+    gap: 20px;
+  }
+
+  .subscribe-text {
+    width: 100%;
+  }
+
+  /* Form ko mobile pe full width kiya */
+  .subscribe-form {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row; /* Input aur Button saath mein rahenge */
+  }
+
+  .subscribe-form input {
+    padding: 12px;
+  }
+
+  .subscribe-form button {
+    padding: 0 15px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Chote phones ke liye Newsletter form ko stack kar diya */
+  .subscribe-form {
+    flex-direction: column;
+    border: none;
+    background: transparent;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    background: #222;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  .footer-bottom {
+    text-align: left; /* Copyright text bhi left mein */
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Contact Section alignment fix */
+  .footer-col h3 {
+    text-align: left; /* Heading left align */
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Container ke content ko left rakhega */
+    gap: 15px;
+  }
+
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Icons aur text ko left align karega */
+    width: 100%;
+    margin: 0; 
+    text-align: left;
+    gap: 12px; /* Icon aur text ke beech ka gap */
+  }
+
+  .contact-icon {
+    margin: 0; /* Purani koi margin ho toh hata dega */
+  }
+}
+/* --- MOBILE & TABLET LEFT ALIGNMENT --- */
+
+@media (max-width: 992px) {
+  /* Poore footer container ko left align karne ke liye */
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start !important; /* Forcefully left align */
+    padding: 0 20px;
+    gap: 30px;
+  }
+
+  .footer-col {
+    width: 100%;
+    text-align: left !important; /* Text ko left side rakhega */
+  }
+
+  /* 1. ShopCart Logo & Description Left Align */
+  .footer-logo {
+    justify-content: flex-start !important; /* Icon aur text left mein */
+    margin-bottom: 15px;
+  }
+
+  .footer-description {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  /* 2. Social Icons Left Align */
+  .social-icons {
+    justify-content: flex-start !important;
+    padding-left: 0;
+  }
+
+  /* 3. Contact Us Section Left Align */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important; /* Container items left mein */
+  }
+
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important; /* Icon aur details left mein */
+    text-align: left;
+    width: 100%;
+    gap: 12px;
+  }
+
+  /* 4. Newsletter Section Left Align */
+  .subscribe-section {
+    padding: 40px 20px;
+  }
+
+  .subscribe-card {
+    align-items: flex-start !important; /* Newsletter header left mein */
+    text-align: left !important;
+  }
+
+  .subscribe-form {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Chote mobile phones ke liye extra fix */
+@media (max-width: 600px) {
+  .subscribe-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+  }
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Puri screen ki height */
+}
+
+/* Navbar aur Footer ke beech ka main content */
+main {
+  flex: 1 0 auto; /* Ye saari khali jagah kha lega aur footer ko niche push karega */
+}
+
+.site-footer {
+  flex-shrink: 0; /* Footer ko dabne nahi dega */
+  width: 100%;
+}

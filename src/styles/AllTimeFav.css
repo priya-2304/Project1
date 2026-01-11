@@ -1,0 +1,167 @@
+.fav-section {
+  background-color: #f8f9fa; /* Light grey background to make white cards pop */
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.fav-header h2 {
+  color: #ff4d24; /* Project Theme Orange */
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.fav-header p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.title-underline {
+  width: 50px;
+  height: 3px;
+  background: #ff4d24;
+  margin: 0 auto 40px;
+}
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.fav-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+  border: 1px solid #eee;
+}
+
+.fav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 77, 36, 0.1);
+}
+
+.fav-img-box {
+  position: relative;
+  height: 350px;
+}
+
+.fav-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+.wishlist-btn:active {
+  transform: scale(0.8);
+}
+.heart-icon {
+  font-size: 20px;
+  color: #888;
+}
+.heart-icon.active {
+  color: #ff4d24; /* Orange Heart when active */
+}
+
+.fav-details {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.free-delivery {
+  background: #f0f3ff;
+  color: #555;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.rating-badge {
+  background: #038d63; /* Meesho-style green rating */
+  color: white;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.review-count {
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .fav-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .fav-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .fav-img-box { height: 220px; }
+  .wishlist-btn { width: 30px; height: 30px; }
+  .heart-icon { font-size: 16px; }
+}
+@media (max-width: 480px) {
+  .rating-row {
+    gap: 5px; 
+  }
+
+  .rating-badge {
+    padding: 2px 6px;
+    font-size: 0.75rem;  
+  }
+
+  .review-count {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff; 
+  height: 400vh;
+  padding: 0;
+}
+
+.login-container {
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  background-color: rgb(255, 254, 254);
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  overflow: hidden; 
+  z-index: 9999;
+
+}
+
+.login-card {
+  display: flex;
+  background: white;
+  width: 100%;
+  height: 560px;
+  max-width: 1100px;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.1); /* Soft shadow for white bg */
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+/* --- Left Side using your MAIN.png --- */
+.left-pane {
+  flex: 1.3;
+  /* Since MAIN.png is in your public folder, use the path below */
+  background-image: url('/MAIN.png'); 
+  background-size: cover;
+  background-position: right center;
+  position: relative;
+  transition: background-position 0.5s ease;
+}
+
+/* This adds a gradient so the white text is readable on the image */
+.overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 10%, transparent 50%);
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white; /* Keep brand text white on image */
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.icon-cart {
+  color: #e65540;
+  font-size: 1.6rem;
+}
+
+.left-text h1 {
+  color: white; /* Keep hero text white on image */
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+/* --- Right Side (Form) --- */
+.right-pane {
+  flex: 1;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; /* Slightly larger for Serif */
+  font-style: italic;
+  margin-bottom: 5px;
+  color: #000000; /* Black text */
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-header p {
+  color: #444444; /* Dark gray */
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #000000; /* Black label */
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #e65540;
+  font-size: 1.2rem;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 14px 15px 14px 45px;
+  border: 1px solid #ddd;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  color: #000;
+}
+
+.input-wrapper input:focus {
+  border-color: #e65540;
+  background-color: #fff;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #000;
+  
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #e65540;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-signin {
+  width: 100%;
+  padding: 15px;
+  background-color: #e65540;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.divider {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.divider::before, .divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 43%;
+  height: 1px;
+  background: #eee;
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.btn-google {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.footer-text a {
+  color: #e65540;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* --- Eye Icon Styling --- */
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #888;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.eye-icon:hover {
+  color: #e65540;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet View (up to 1024px) */
+@media (max-width: 1024px) {
+  .login-card {
+    width: 90%;
+    height: 520px;
+  }
+  
+  .left-text h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile View (up to 768px) */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto; /* Allow scrolling on small screens if needed */
+  }
+
+  .login-container {
+    padding-top: 20px;
+    align-items: center; /* Center the card vertically on mobile */
+    background-color: #ffffff; /* Cleaner look for mobile */
+  }
+
+  .login-card {
+    flex-direction: column;
+    width: 95%;
+    height: auto; /* Let height be natural */
+    box-shadow: none;
+    border: none;
+  }
+
+  .left-pane {
+    display: none; /* REQ: Remove image on mobile */
+  }
+
+  .right-pane {
+    padding: 20px 10px;
+    width: 100%;
+  }
+
+  .welcome-font {
+    font-size: 1.8rem;
+  }
+
+  .input-wrapper input {
+    font-size: 16px; /* Prevents auto-zoom on iPhone */
+  }
+}
+
+.success-banner {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid #c3e6cb;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  body {
+    overflow-y: auto; /* Tablet par scroll allow karein */
+  }
+
+  .login-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto; /* Auto height taaki content fit ho */
+    min-height: 100vh;
+  }
+
+  .login-card {
+    flex-direction: column; /* Stack image and form */
+    width: 80%; /* Width thodi kam taaki side mein space rahe */
+    height: auto;
+    max-width: 550px; /* Tablet par card ko bahut zyada failne se rokega */
+  }
+
+  .left-pane {
+    height: 250px; /* Tablet par image ki height fix karein */
+    flex: none;
+  }
+
+  .left-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .right-pane {
+    padding: 30px;
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .login-container {
+    padding-top: 0;
+    background-color: #ffffff; 
+  }
+  .login-card {
+    width: 100%;
+    border-radius: 0; /* Full screen look on mobile */
+    box-shadow: none;
+    border: none;
+  }
+  .left-pane {
+    display: none; /* Mobile par image hide kar dein */
+  }
+  .right-pane {
+    padding: 40px 20px;
+  }
+  .welcome-font {
+    font-size: 1.8rem;
+  }
+  .btn-signin, .btn-google {
+    padding: 16px;
+  }
+}
+
+.centered-card {
+  max-width: 550px; 
+  width: 100%;
+  margin: 0 auto;
+  height: auto !important; 
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form ke andar padding aur alignment desktop ke liye */
+.right-pane.full-width {
+  flex: 1;
+  padding: 50px; /* Badi screen par zyada breathing space */
+  width: 100%;
+}
+
+/* Buttons hover effect for desktop users */
+.btn-signin:hover {
+  background-color: #d14432;
+  transition: 0.3s;
+}
+
+/* Input focus effect */
+.input-wrapper input:focus {
+  border-color: #e65540;
+  box-shadow: 0 0 5px rgba(230, 85, 64, 0.2);
+}
+
+/* Badi screens par typography adjust karein */
+@media (min-width: 1025px) {
+  .welcome-font {
+    font-size: 2.5rem;
+  }
+  
+  .footer-text {
+    margin-top: 35px;
+  }
+}
+
+/* Icon ki position set karein */
+.input-icon {
+  position: absolute;
+  left: 15px; /* Left edge se thoda andar */
+  color: #e65540;
+  font-size: 1.2rem;
+  z-index: 2; /* Taaki icon hamesha upar dikhe */
+  pointer-events: none; /* Icon pe click karne se input focus block na ho */
+}
+
+/* Input text ko right side push karein */
+.input-wrapper input {
+  width: 100%;
+  padding: 14px 15px 14px 50px !important; /* Yahan 50px padding se text aur icon mein gap aayega */
+  border: 1px solid #ddd;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+/* Focus hone par border color change */
+.input-wrapper input:focus {
+  border-color: #e65540;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(230, 85, 64, 0.1);
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 10px; /* Gap badhane ke liye */
+  color: #444;
+  letter-spacing: 0.5px; /* Professional look ke liye */
+}
+
+
+/* SignUp aur Forgot Password ke liye common container fix */
+.login-card.wide-card {
+  max-width: 650px !important; /* Width ko badhaya gaya */
+  padding: 40px !important;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Icon aur Text ke beech gap (Important) */
+.input-wrapper input {
+  padding: 14px 15px 14px 50px !important; /* 50px space icons ke liye */
+  width: 100%;
+}
+
+.input-icon {
+  left: 15px !important; /* Icon ko left edge se set kiya */
+}
+
+/* Mobile responsive fix */
+@media (max-width: 480px) {
+  .login-card.wide-card {
+    max-width: 100% !important;
+    padding: 20px !important;
+    border-radius: 0;
+  }
+}

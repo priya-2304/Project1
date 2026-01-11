@@ -1,0 +1,179 @@
+.flash-sale-container {
+  background-color: #0b0e11;
+  padding: 60px 5%;
+  color: white;
+  overflow: hidden;
+}
+
+.flash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.flash-title h2 { font-size: 2rem; font-weight: 800; }
+.flash-title h2 span { color: #ff4d24; }
+.flash-title p { color: #888; font-size: 0.9rem; }
+
+.countdown-timer { display: flex; gap: 10px; }
+.time-box {
+  background: #161a1f;
+  border: 1px solid #333;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 55px;
+}
+.time-box span { color: #ff4d24; font-weight: bold; font-size: 1.1rem; }
+.time-box p { font-size: 0.6rem; color: #888; margin: 0; }
+
+/* --- SLIDER VIEWPORT --- */
+.flash-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.flash-slider-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flash-card-wrapper {
+  flex: 0 0 25%; 
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.flash-card {
+  cursor: pointer;
+  position: relative;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #161a1f;
+  border: 1px solid #222;
+  transition: 0.3s;
+}
+.flash-card:hover {
+  border-color: #ff4d24; 
+}
+.flash-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+.flash-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  text-align: center;
+}
+
+.flash-overlay h4 { font-size: 0.9rem; margin-bottom: 5px; }
+.flash-overlay button {
+  background: transparent;
+  color: #ff4d24;
+  border: none;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Dots Styling */
+.flash-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+.flash-dot {
+  width: 8px;
+  height: 8px;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.flash-dot.active {
+  background: #ff4d24;
+  width: 20px;
+  border-radius: 10px;
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Tablet: 2 Cards */
+@media (max-width: 1024px) {
+  .flash-card-wrapper {
+    flex: 0 0 50%;
+  }
+  .flash-title h2 { font-size: 1.6rem; }
+}
+
+/* Timer Boxes Responsive Styles */
+.countdown-timer {
+  display: flex;
+  gap: 10px;
+}
+
+.time-box {
+  background: #161a1f;
+  border: 1px solid #ff4d24; /* Theme orange border */
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 60px;
+}
+
+.time-box span {
+  color: #ff4d24;
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: block;
+}
+
+.time-box p {
+  font-size: 0.6rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Mobile: 1 Card */
+@media (max-width: 600px) {
+  .flash-card-wrapper {
+    flex: 0 0 100%;
+  }
+  .flash-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  .time-box {
+    min-width: 50px;
+    padding: 5px;
+  }
+  .time-box span {
+    font-size: 1.1rem;
+  }
+  .flash-title h2 {
+    font-size: 1.8rem;      
+    width: 100%;
+  }
+
+  .flash-title p {
+    margin-bottom: 5px;
+  }
+  .countdown-timer {
+    justify-content: center;
+    width: 100%;
+  }
+  .flash-card { height: 300px; }
+}
