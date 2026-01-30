@@ -15,26 +15,21 @@ import Login from './components/Login';
 import Profile from './components/Profile';
 import SignUp from './components/SignUp';
 import ForgotPassword from './components/ForgotPassword';
-import ScrollToTop from './components/ScrollToTop';
 
 import { CartProvider } from './context/CartContext.jsx'; 
 import './App.css';
 
-// 1. Ek internal component banaya taaki useLocation() use kar sakein
 const AppContent = () => {
   const location = useLocation();
   const isAuthenticated = localStorage.getItem("isLoggedIn") === "true";
-  
-  // 2. Yahan define kiya isLoginPage variable
   const isLoginPage = location.pathname === '/login';
 
   return (
     <div className="App">
-      {/* Navbar logic: Agar logged in ho aur login page par nahi ho */}
-      {isAuthenticated && !isLoginPage && <Navbar />}
+     
+    {isAuthenticated && !isLoginPage && <Navbar />}
 
       <div className="content-wrapper">
-       
         <Routes>
           <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/" />} />
           
@@ -57,7 +52,6 @@ const AppContent = () => {
         </Routes>
       </div>
 
-      {/* 3. Footer logic: Login page par hide rahega */}
       {isAuthenticated && !isLoginPage && <Footer />}
     </div>
   );
@@ -67,7 +61,6 @@ function App() {
   return (
     <CartProvider>
       <Router>
-         <ScrollToTop />
         <AppContent />
       </Router>
     </CartProvider>

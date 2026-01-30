@@ -51,10 +51,10 @@
   flex-direction: column;
 }
 
-.content-wrapper { 
-  flex: 1; 
+/* Isko delete ya comment out karein */
+.content-wrapper {
+ flex : 1;
 }
-
 
 
 /* Content area ko expand karein taaki footer bottom par chala jaye */

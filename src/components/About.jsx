@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/About.css';
 
 const About = () => {
-  
+useLayoutEffect(() => {
+    const forceScroll = () => {
+      window.scrollTo(0, 0);
+      const wrapper = document.querySelector('.content-wrapper');
+      if (wrapper) {
+        wrapper.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        wrapper.scrollTop = 0; // Double safety
+      }
+    };
+    forceScroll();
+    const timeoutId = setTimeout(forceScroll, 50); 
+    return () => clearTimeout(timeoutId);
+  }, []);
+
   // Animation Variants
   const focusBlur = {
     hidden: { filter: "blur(15px)", opacity: 0, scale: 1.1 },

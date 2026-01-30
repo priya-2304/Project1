@@ -139,7 +139,6 @@
   .mobile-only { display: block; }
   
   .mobile-toggle-icon { display: block; }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -260,7 +259,7 @@
   .mobile-only { display: block !important; }
   
   .mobile-toggle-icon { display: block; z-index: 2001; }
-
+  
   .nav-links {
     display: flex;
     flex-direction: column;

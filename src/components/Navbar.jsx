@@ -17,8 +17,10 @@ const Navbar = () => {
 
   // --- LOGOUT LOGIC ---
   const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn"); // Storage clear
-    window.location.href = "/login";
+    localStorage.removeItem("isLoggedIn"); 
+    setMenuOpen(false);
+    setProfileOpen(false);
+   navigate("/login");
    };
 
   // Scroll visibility logic
@@ -64,11 +66,10 @@ const Navbar = () => {
           <li className="mobile-only">
             <Link to="/profile" className="nav-item" onClick={() => setMenuOpen(false)}>My Profile</Link>
           </li>
-          <li className="mobile-only mobile-logout-li">
-            {/* 3. Mobile Logout Handle */}
-            <button className="mobile-logout-btn" onClick={handleLogout}>
+          <li className="mobile-only">
+            <div className="nav-item mobile-logout-btn" onClick={handleLogout} style={{cursor:'pointer', display:'flex', alignItems:'center', gap:'10px'}}>
               <FaSignOutAlt /> Logout
-            </button>
+            </div>
           </li>
         </ul>
 
@@ -96,8 +97,14 @@ const Navbar = () => {
             {profileOpen && (
               <div className="nav-profile-dropdown">
                 <Link to="/profile" onClick={() => setProfileOpen(false)}>My Profile</Link>
-                {/* 4. Desktop Logout Handle */}
-                <button onClick={handleLogout}>Logout</button>
+               <hr />
+              <div 
+                  className="dropdown-logout-link" 
+                  onClick={handleLogout}
+                  style={{cursor:'pointer', display:'flex', alignItems:'center', gap:'8px', padding: '10px'}}
+                >
+                  <FaSignOutAlt /> Logout
+                </div>
               </div>
             )}
           </div>
